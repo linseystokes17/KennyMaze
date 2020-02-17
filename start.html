@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<head>
+    <meta charset = "UTF-8">
+    <title>Simple Maze Demo - Start</title>
+    <script src = "main.js"></script>
+</head>
+<body>
+    <section id="header">
+        <h1>Select Maze Size</h1>
+    </section>
+    <section id="input">
+        <form>
+            <input type="radio" onClick="setMaze(5, id)" name = "maze" id = "5x5">5x5 Maze</input>
+            <input type="radio" onClick="setMaze(10, id)" name = "maze" id = "10x10">10x10 Maze</input>
+            <input type="radio" onClick="setMaze(15, id)" name = "maze" id = "15x15">15x15 Maze</input>
+            <input type="radio" onClick="setMaze(20, id)" name = "maze" id = "20x20">20x20 Maze</input>
+            <button onClick = submit()>Submit</button>
+        </form>
+            
+    </section>
+    <section>
+        <div id = outputText></p>
+    </section>
+</body>
+</html>
