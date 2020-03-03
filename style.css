@@ -1,0 +1,38 @@
+#header{
+    background-color: rgb(2, 2, 77);
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+h3{
+    font-size: small;
+}
+
+#scores{
+    position: relative;
+    float: right;
+    padding-right: 20%;
+}
+
+#input{
+    text-align: center;
+    background-color: darkgrey;
+    padding-top: 20px;    
+    padding-bottom: 20px;
+}
+
+#label{
+    font-family: fantasy;
+    font-size: large;
+}
+
+#scores{
+    background-color: darkgrey;
+    text-align: center;
+    width: 30%;
+    height: 50%;
+    color: white;
+
+}
+

@@ -1,28 +1,42 @@
 <!DOCTYPE html>
-<html lang = "en-US">
+<html lang="en-US">
+
 <head>
-    <meta charset = "UTF-8">
+    <meta charset="UTF-8">
     <title>Simple Maze Demo</title>
-    <script src = "main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css"></style>
+    <script>
+        function setSize(size){
+            document.getElementById("canvas-main").setAttribute('title', size.toString());
+            start = Date.now();
+        }
+    </script>
+    <script src="main.js"></script>
+    <script src="maze.js"></script>
 </head>
-<body>
+
+<body onclick=initialize()>
     <section id="header">
-        <h1>Select Maze Size</h1>
+        <h1>Kenny's Dead!</h1>
+        <h3>Help Kenny get back to South Park!</h3>
     </section>
     <section id="input">
+        <label id="label">Select a maze size to start</label>
         <form>
-            <input type="radio" onClick="setMaze(5, id)" name = "maze" id = "5x5">5x5 Maze</input>
-            <input type="radio" onClick="setMaze(10, id)" name = "maze" id = "10x10">10x10 Maze</input>
-            <input type="radio" onClick="setMaze(15, id)" name = "maze" id = "15x15">15x15 Maze</input>
-            <input type="radio" onClick="setMaze(20, id)" name = "maze" id = "20x20">20x20 Maze</input>
+            <input type="button" onclick="setSize(5)" name="maze" id="5" value="5x5"></input>
+            <input type="button" onclick="setSize(10)" name="maze" id="10" value="10x10"></input>
+            <input type="button" onclick="setSize(15)" name="maze" id="15" value="15x15"></input>
+            <input type="button" onclick="setSize(20)" name="maze" id="20" value="20x20"></input>
         </form>
-            
     </section>
-    <section>
-        <div id = outputText></p>
+    <canvas id="canvas-main" title = "5" width="2048" height="2048" style="width: 50%; height: 50%; position: sticky;"></canvas>
+    <section id="scores">
+        <h1> Highscores: </h1>
+        <div id="scorelist"></div>
+        <p id="timer"></p>
     </section>
-    <section>
-        <canvas id = "canvas-main" width = "2048" height = "2048" style = "width: 75%; height: 75%"></canvas>
-    </section>
+
+
 </body>
+
 </html>
